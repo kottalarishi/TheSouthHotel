@@ -1,0 +1,248 @@
+/* Reset some default margins/paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Home Container */
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== Banner Section ===== */
+.header-banner {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.header-banner h1,
+.header-banner h3 {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  margin: 0;
+  text-shadow: 1px 1px 4px black;
+}
+
+.header-banner h1 {
+  font-size: 2.8rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-banner h3 {
+  font-size: 1.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.south-color {
+  color: #e0b000;
+}
+
+/* ===== Room Search Section ===== */
+.view-all-rooms {
+  display: block;
+  text-align: center;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.view-all-rooms:hover {
+  color: #0056b3;
+}
+
+/* ===== Services Section ===== */
+.service-section {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-details {
+  padding: 1rem;
+}
+
+.service-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== Footer ===== */
+.my-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .header-banner h1 {
+    font-size: 2rem;
+  }
+
+  .header-banner h3 {
+    font-size: 1rem;
+  }
+
+  .service-card img {
+    height: 160px;
+  }
+}
+/* ========= ROOM SEARCH SECTION ========== */
+.room-search-wrapper {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.room-search-wrapper h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+/* Search form layout */
+.room-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Input / Select fields */
+.search-field {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.search-field label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.search-field input,
+.search-field select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border 0.2s ease;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Search button */
+.home-search-button {
+  flex: 1 1 100%;
+  padding: 12px 0;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.home-search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message */
+.error-message {
+  margin-top: 1rem;
+  color: #d8000c;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .search-field {
+    flex: 1 1 100%;
+  }
+
+  .home-search-button {
+    width: 100%;
+  }
+}
